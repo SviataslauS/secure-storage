@@ -2,9 +2,9 @@
 
 This is a simple Koa application for securely storing and retrieving data using a PostgreSQL database. It includes Docker Compose files to set up the application and database easily.
 
-## Prerequisites
-
 > **_NOTE:_** App endpoints have key as a parameter. The key length is dependent on the algorithm. In this case we use aes-128-cbc, so key length is 16 bytes (128 bits).
+
+## Prerequisites
 
 Before running the application, ensure you have the following prerequisites installed on your system:
 
