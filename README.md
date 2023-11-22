@@ -54,7 +54,7 @@ Run the Node.js application:
 
 > **_NOTE:_** App endpoints have key as a parameter. The key length is dependent on the algorithm. In this case we use aes-128-cbc, so passed key length should be 16 bytes (128 bits).
 
-## Store Data
+#### Store Data
 
 - Endpoint: POST /store
 - Request Body:
@@ -68,7 +68,7 @@ Run the Node.js application:
 
 ```
 
-## Retrieve Data
+#### Retrieve Data
 
 - Endpoint: POST /retrieve
 - Request Body:
