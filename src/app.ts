@@ -25,7 +25,7 @@ const app = new Koa();
 const router = new Router();
 
 router.post('/store', storeController);
-router.get('/retrieve', retrieveController);
+router.post('/retrieve', retrieveController);
 
 app.use(bodyParser());
 app.use(errorMiddleware);

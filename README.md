@@ -2,8 +2,6 @@
 
 This is a simple Koa application for securely storing and retrieving data using a PostgreSQL database. It includes Docker Compose files to set up the application and database easily.
 
-> **_NOTE:_** App endpoints have key as a parameter. The key length is dependent on the algorithm. In this case we use aes-128-cbc, so key length is 16 bytes (128 bits).
-
 ## Prerequisites
 
 Before running the application, ensure you have the following prerequisites installed on your system:
@@ -51,6 +49,37 @@ Run the Node.js application:
    ```bash
    npm run dev
    ```
+
+### Endpoints
+
+> **_NOTE:_** App endpoints have key as a parameter. The key length is dependent on the algorithm. In this case we use aes-128-cbc, so passed key length should be 16 bytes (128 bits).
+
+## Store Data
+
+- Endpoint: POST /store
+- Request Body:
+
+```js:
+{
+  "id": "your_unique_id",
+  "encryptionKey": "your_encryption_key",
+  "value": "your_data_value"
+}
+
+```
+
+## Retrieve Data
+
+- Endpoint: POST /retrieve
+- Request Body:
+
+```js:
+{
+  "id": "your_unique_id",
+  "decryptionKey": "your_encryption_key"
+}
+
+```
 
 ### Testing
 
