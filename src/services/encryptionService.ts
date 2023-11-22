@@ -1,8 +1,7 @@
 import crypto from 'crypto';
 
 const algorithm = 'aes-128-cbc';
-const key1 = crypto.createHash('sha256').update(String("secret")).digest('base64').slice(0, 16)
-console.error(key1)
+
 export function encrypt(data: string, key: string): string {
   const iv = crypto.randomBytes(16); // Generate a random initialization vector
   const cipher = crypto.createCipheriv(algorithm, Buffer.from(key), iv);
